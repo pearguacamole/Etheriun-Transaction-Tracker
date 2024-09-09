@@ -1,5 +1,3 @@
-# deposit_tracker.py
-
 from web3 import Web3
 from config import BEACON_DEPOSIT_CONTRACT
 from mongo_handler import MongoHandler
@@ -27,11 +25,11 @@ class DepositTracker:
 
     def process_event(self, event):
         tx_hash = event['transactionHash'].hex()
-        tx = self.web3.eth.getTransaction(tx_hash)
-        block = self.web3.eth.getBlock(tx['blockNumber'])
+        tx = self.web3.eth.get_transaction(tx_hash)
+        block = self.web3.eth.get_block(tx['blockNumber'])
         
         # Process multiple deposits in a single transaction if applicable
-        for log in self.web3.eth.getTransactionReceipt(tx_hash).logs:
+        for log in self.web3.eth.get_transaction_receipt(tx_hash).logs:
             if log.address == self.contract_address:
                 deposit = {
                     'blockNumber': tx['blockNumber'],
