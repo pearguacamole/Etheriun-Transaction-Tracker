@@ -3,6 +3,8 @@ from config import BEACON_DEPOSIT_CONTRACT
 from mongo_handler import MongoHandler
 from telegram_notifier import TelegramNotifier
 from logger import logger
+from datetime import datetime, timezone
+import asyncio
 
 class DepositTracker:
     def __init__(self, web3):
@@ -21,9 +23,17 @@ class DepositTracker:
         # Polling the filter for new deposits
         while True:
             for event in deposit_filter.get_new_entries():
-                self.process_event(event)
+                asyncio.run(self.process_event(event))
 
-    def process_event(self, event):
+    def format_deposit(self, deposit):
+        deposit['blockTimestamp'] = datetime.fromtimestamp(int(deposit['blockTimestamp']), tz=timezone.utc).strftime('%H:%M:%S %Y-%m-%d')
+        deposit['fee'] = deposit['fee'] / 1e18  # Convert Wei to ETH
+        deposit['transactionLink'] = f"https://etherscan.io/tx/0x{deposit['hash']}"
+        return deposit
+
+    async def process_event(self, event):
+        logger.info("event")
+        logger.info(f"{event}\n\n")
         tx_hash = event['transactionHash'].hex()
         tx = self.web3.eth.get_transaction(tx_hash)
         block = self.web3.eth.get_block(tx['blockNumber'])
@@ -38,6 +48,7 @@ class DepositTracker:
                     'hash': tx_hash,
                     'pubkey': log.topics[1].hex()  # Adjust based on actual event structure
                 }
-                logger.info(f"New deposit detected: {deposit}")
-                self.mongo_handler.insert_deposit(deposit)
-                self.notifier.send_notification(f"New deposit detected: {deposit}")
+                fromatted_deposit = self.format_deposit(deposit)
+                logger.info(f"New deposit detected: {fromatted_deposit} \n\n")
+                await self.notifier.send_notification(f"New deposit detected: Block Number: {fromatted_deposit['blockNumber']} at Timestamp: {fromatted_deposit['blockTimestamp']} the transaction fee is {fromatted_deposit['fee']} eth, Transaction can be viewed at {fromatted_deposit['transactionLink']}")
+                logger.info("notification sent \n\n")
