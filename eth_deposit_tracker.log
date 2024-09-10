@@ -1,0 +1,46 @@
+2024-09-10 19:23:17,086 [INFO] Connected to Ethereum node
+2024-09-10 19:23:17,228 [INFO] Prometheus metrics available at http://localhost:8000
+2024-09-10 19:23:17,609 [INFO] Started monitoring deposits on Beacon Deposit Contract
+2024-09-10 19:26:50,380 [INFO] New deposit detected: {'blockNumber': 20720649, 'blockTimestamp': '13:56:47 2024-09-10', 'fee': 0.0007609578, 'hash': '0xbfabcf9be458d28a2e600fc9c86f2404aabc3234fd5ef9d318518c66569051c9', 'pubkey': '0x000000000000000000000000c8084f0227d4f857ec9d48c481abc040ec4a4f1f', 'transactionLink': 'https://etherscan.io/tx/0xbfabcf9be458d28a2e600fc9c86f2404aabc3234fd5ef9d318518c66569051c9'} 
+
+
+2024-09-10 19:26:51,300 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/getMe "HTTP/1.1 200 OK"
+2024-09-10 19:26:51,838 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/sendMessage "HTTP/1.1 200 OK"
+2024-09-10 19:26:51,841 [INFO] notification sent 
+
+
+2024-09-10 19:35:27,852 [INFO] Connected to Ethereum node
+2024-09-10 19:35:27,983 [INFO] Prometheus metrics available at http://localhost:8000
+2024-09-10 19:35:28,272 [INFO] Started monitoring deposits on Beacon Deposit Contract
+2024-09-10 19:45:26,154 [INFO] New deposit detected: {'blockNumber': 20720741, 'blockTimestamp': '14:15:23 2024-09-10', 'fee': 0.002596330668960192, 'hash': '0xd8e1c9f03e8e9f3625fb7102b6828baa07d8a8451a77d5a53f910010a834bc95', 'pubkey': '0x000000000000000000000000527f2f3a52453b6802c24766aff722d1b773113b', 'transactionLink': 'https://etherscan.io/tx/0xd8e1c9f03e8e9f3625fb7102b6828baa07d8a8451a77d5a53f910010a834bc95'} 
+
+
+2024-09-10 19:45:27,140 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/getMe "HTTP/1.1 200 OK"
+2024-09-10 19:45:27,587 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/sendMessage "HTTP/1.1 200 OK"
+2024-09-10 19:45:27,593 [INFO] notification sent 
+
+
+2024-09-10 19:45:27,594 [INFO] New deposit detected: {'blockNumber': 20720741, 'blockTimestamp': '14:15:23 2024-09-10', 'fee': 0.002596330668960192, 'hash': '0xd8e1c9f03e8e9f3625fb7102b6828baa07d8a8451a77d5a53f910010a834bc95', 'pubkey': '0x000000000000000000000000527f2f3a52453b6802c24766aff722d1b773113b', 'transactionLink': 'https://etherscan.io/tx/0xd8e1c9f03e8e9f3625fb7102b6828baa07d8a8451a77d5a53f910010a834bc95'} 
+
+
+2024-09-10 19:45:28,134 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/getMe "HTTP/1.1 200 OK"
+2024-09-10 19:45:28,507 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/sendMessage "HTTP/1.1 200 OK"
+2024-09-10 19:45:28,508 [INFO] notification sent 
+
+
+2024-09-10 19:45:29,363 [INFO] New deposit detected: {'blockNumber': 20720741, 'blockTimestamp': '14:15:23 2024-09-10', 'fee': 0.002596330668960192, 'hash': '0xd8e1c9f03e8e9f3625fb7102b6828baa07d8a8451a77d5a53f910010a834bc95', 'pubkey': '0x000000000000000000000000527f2f3a52453b6802c24766aff722d1b773113b', 'transactionLink': 'https://etherscan.io/tx/0xd8e1c9f03e8e9f3625fb7102b6828baa07d8a8451a77d5a53f910010a834bc95'} 
+
+
+2024-09-10 19:45:29,876 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/getMe "HTTP/1.1 200 OK"
+2024-09-10 19:45:30,352 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/sendMessage "HTTP/1.1 200 OK"
+2024-09-10 19:45:30,356 [INFO] notification sent 
+
+
+2024-09-10 19:45:30,356 [INFO] New deposit detected: {'blockNumber': 20720741, 'blockTimestamp': '14:15:23 2024-09-10', 'fee': 0.002596330668960192, 'hash': '0xd8e1c9f03e8e9f3625fb7102b6828baa07d8a8451a77d5a53f910010a834bc95', 'pubkey': '0x000000000000000000000000527f2f3a52453b6802c24766aff722d1b773113b', 'transactionLink': 'https://etherscan.io/tx/0xd8e1c9f03e8e9f3625fb7102b6828baa07d8a8451a77d5a53f910010a834bc95'} 
+
+
+2024-09-10 19:45:30,931 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/getMe "HTTP/1.1 200 OK"
+2024-09-10 19:45:31,373 [INFO] HTTP Request: POST https://api.telegram.org/bot7267313919:AAEBjED3wTxrrJzmWljBxSdFGfjgXTwvgQM/sendMessage "HTTP/1.1 200 OK"
+2024-09-10 19:45:31,374 [INFO] notification sent 
+
+

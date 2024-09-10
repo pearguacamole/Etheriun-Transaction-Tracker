@@ -15,5 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expose port 8000 for Prometheus metrics
 EXPOSE 8000
 
+# Ensure the log file is writable
+RUN touch eth_deposit_tracker.log && chmod 666 eth_deposit_tracker.log
+
 # Run the main.py when the container launches
 CMD ["python", "main.py"]
