@@ -67,10 +67,10 @@ class DepositTracker:
                         'pubkey': '0x'+str(log.topics[1].hex())  # Adjust based on actual event structure
                     }
                     fromatted_deposit = self.format_deposit(deposit)
-                    logger.info(f"New deposit detected: {fromatted_deposit} \n\n")
+                    logger.info(f"New deposit detected: {fromatted_deposit}")
                     self.mongo_handler.insert_deposit(deposit)
                     await self.notifier.send_notification(f"New deposit detected: Block Number: {fromatted_deposit['blockNumber']} at Timestamp: {fromatted_deposit['blockTimestamp']} the transaction fee is {fromatted_deposit['fee']} eth, Transaction can be viewed at {fromatted_deposit['transactionLink']}")
-                    logger.info("notification sent \n\n")
+                    logger.info("notification sent via telegram")
                     DEPOSIT_PROCESSED.inc() 
         except web3_exceptions.Web3RPCError as rpc_error:
             logger.error(f"Web3 RPC Error in processing event: {rpc_error}")
