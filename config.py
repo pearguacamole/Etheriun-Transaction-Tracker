@@ -2,9 +2,9 @@
 RPC_ENDPOINT = 'https://eth-mainnet.g.alchemy.com/v2/<<API Key here>>'
 #check example below
 #RPC_ENDPOINT = 'https://eth-mainnet.g.alchemy.com/v2/BRVNfqEubNMJJfypmMCsggWcwM-JefkA'
-BEACON_DEPOSIT_CONTRACT = '0x8149745670881d99700078ede5903A1A7beBe262'
+BEACON_DEPOSIT_CONTRACT = '0x00000000219ab540356cBB839Cbe05303d7705Fa'
 
-
+#replace the mongodb uri with uri given by mondgo db for connection
 #replace <<Password Here>> placeholder with mongodb password
 MONGO_URI = 'mongodb+srv://kushagra:<<Password Here>>@luganode.ftepf.mongodb.net/?retryWrites=true&w=majority&appName=luganode'
 # See the example below here the password is wordpass
