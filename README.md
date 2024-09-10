@@ -1,6 +1,6 @@
 # Luganodes-Task   Ethereum Deposit Tracker
 
-An Ethereum Deposit Tracker that logs all deposits over a contract and creates Telegram alerts. Comes with a grafana dashboard for better visualisation.
+The Ethereum Deposit Tracker is a system designed to monitor deposits on the Beacon Deposit Contract, log them in a MongoDB database, and send real-time Telegram alerts. The application integrates Prometheus for collecting metrics and uses Grafana to visualize the data, providing insights into the deposits and any errors encountered. This setup helps streamline Ethereum deposit tracking with real-time alerts and visual monitoring.
 
 ## Requirements
 - python==3.12.2 
@@ -20,7 +20,7 @@ Create a python virtual environment using venv and then activate the virtual env
 
 ```bash
 python -m venv nodes
-source node/bin/activate
+source nodes/bin/activate
 ```
 Once this is done we will be able to see '(nodes)' at the start of the command line before the username, after which we can install all the packages required for the application to work
 
@@ -107,7 +107,7 @@ You can copy past form here too, just put it inside the prometheus.yml that was 
 ```bash
 ./prometheus --config.file=prometheus.yml
 ```
-Leave it running
+Leave it running, Prometheus is now running and scraping metrics from the Ethereum Deposit Tracker every 5 seconds. These metrics will later be visualized in Grafana.
 
 ## Grafana
 For Macos, run 
@@ -147,7 +147,7 @@ python main.py
 - Once you see this it means that the application has started successfully
 - Once there is a deposit logs about it will appear along with alerts over telegram.
 #### Grafana
-Once the application is up and running you can monitor it using grafana.
+Once the application is up and running you can monitor it using grafana. In the dashboard we visualize the number of deposits tracked and errors encountered over time.
 - In your web browser open 'localhost:3000:
 - Login in using user name and password, default is 'admin' for both
 - Once grafana is open, go into dashboard section and select import dashboard
@@ -155,3 +155,9 @@ Once the application is up and running you can monitor it using grafana.
 - Select the "luganodes dash-1725984554946.json" file from the project directory.
 - Follow the prompts and choose Prometheus as data handler
 - You will now be able to see the dashboard with live tracking of errors encountered by the application and total deposits logged.
+##### Not seeing any data
+Check Prometheus logs for errors and ensure that Prometheus is scraping the correct targets.
+
+### Troubleshooting:
+- If you don't see deposit logs, check that your RPC_ENDPOINT and MongoDB URI are correctly configured.
+- Ensure that Prometheus is scraping the correct target by checking its logs at <Prometheus directory>/logs."
