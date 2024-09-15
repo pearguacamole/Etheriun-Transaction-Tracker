@@ -1,4 +1,4 @@
-# Luganodes-Task   Ethereum Deposit Tracker
+# Ethereum Deposit Tracker
 
 The Ethereum Deposit Tracker is a system designed to monitor deposits on the Beacon Deposit Contract, log them in a MongoDB database, and send real-time Telegram alerts. The application integrates Prometheus for collecting metrics and uses Grafana to visualize the data, providing insights into the deposits and any errors encountered. This setup helps streamline Ethereum deposit tracking with real-time alerts and visual monitoring.
 
@@ -12,7 +12,7 @@ The Ethereum Deposit Tracker is a system designed to monitor deposits on the Bea
 Clone the GitHub repository 
 
 ```bash
-git clone https://github.com/pearguacamole/Luganodes-SDE-Task.git
+[git clone https://github.com/pearguacamole/Luganodes-SDE-Task.git](https://github.com/pearguacamole/Etheriun-Transaction-Tracker.git)
 ```
 Move into the project directory and open a terminal window inside the directory
 
