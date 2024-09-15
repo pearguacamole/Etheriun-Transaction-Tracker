@@ -152,7 +152,7 @@ Once the application is up and running you can monitor it using grafana. In the 
 - Login in using user name and password, default is 'admin' for both
 - Once grafana is open, go into dashboard section and select import dashboard
 - You'll be prompted to choose a Json file
-- Select the "luganodes dash-1725984554946.json" file from the project directory.
+- Select the "dashboard.json" file from the project directory.
 - Follow the prompts and choose Prometheus as data handler
 - You will now be able to see the dashboard with live tracking of errors encountered by the application and total deposits logged.
 ##### Not seeing any data
